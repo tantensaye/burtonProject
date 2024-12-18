@@ -1,0 +1,68 @@
+# bitbucket-pipelines.yml
+image: python:3.12
+
+pipelines:
+  default:
+    - step:
+        name: Selenium Chrome Tests
+        services:
+          - docker
+        cache:
+          - pip
+        script:
+          - apt-get update -qqy
+          - apt-get install -y wget unzip default-jre  # Install necessary tools and Java runtime
+
+          # Install Allure commandline tool
+          - curl -o allure-2.24.1.deb -OL https://github.com/allure-framework/allure2/releases/download/2.24.1/allure_2.24.1-1_all.deb
+          - dpkg -i allure-2.24.1.deb || true
+          - apt-get install -f -y
+
+          # Download and install Google Chrome
+          - wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.86/linux64/chrome-linux64.zip #Download Chrome
+          - unzip chrome-linux64.zip -d /opt/chrome  # Unzip to a specific directory
+          - mv /opt/chrome/chrome-linux64/chrome /usr/bin/google-chrome  # Move Chrome to /usr/bin
+          - chmod +x /usr/bin/google-chrome  # Make Chrome executable
+
+          # Download and install ChromeDriver
+          - wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.86/linux64/chromedriver-linux64.zip #Download Chromedriver
+          - unzip chromedriver-linux64.zip -d /opt/chromedriver  # Unzip to a specific directory
+          - mv /opt/chromedriver/chromedriver-linux64/chromedriver /usr/bin/google-chromedriver  # Move ChromeDriver to /usr/bin
+          - chmod +x /usr/bin/google-chromedriver  # Make ChromeDriver executable
+
+          # Cleanup downloaded files
+          - rm -f /opt/chrome/chrome-linux64.zip /opt/chromedriver/chromedriver-linux64.zip  # Remove zip files
+
+          # Install Docker Compose
+          - curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+          - chmod +x /usr/local/bin/docker-compose
+
+          # Start Docker Services
+          - cd /opt/atlassian/pipelines/agent/build
+          - docker-compose -f docker-compose.yml up -d
+          - sleep 5 # Wait for services to start
+
+          # Set up Python virtual environment and run tests
+          - python3 -m venv myenv
+          - source myenv/bin/activate
+          - pip install -r requirements.txt
+          - pip list
+          - python -m pytest -s tests/test_SoftgoodsSecureCheckout.py --alluredir allure-results
+
+          # Stop Docker Services
+          - docker-compose -f docker-compose.yml down
+
+          # Generate Allure report
+          - allure generate allure-results -o allure-report
+        artifacts:
+          - allure-report/**
+        environment:
+          BITBUCKET_CLONE_DIR: /opt/atlassian/pipelines/agent/build
+          SELENIUM_OPTS: "-Dorg.openqa.grid.log.GridLoglevel=WARNING"
+        networks:
+          - selenium-grid-network
+
+definitions:
+  networks:
+    selenium-grid-network:
+      driver: bridge
