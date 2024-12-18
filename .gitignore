@@ -1,0 +1,24 @@
+# Ignore PyCharm files
+.idea/
+.vscode/
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore logs and error files
+logs/
+*.log
+
+# Ignore Allure Reports
+reports/
+
+# Ignore Docker artifacts
+docker-compose.override.yml
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+requirements_backup.txt
