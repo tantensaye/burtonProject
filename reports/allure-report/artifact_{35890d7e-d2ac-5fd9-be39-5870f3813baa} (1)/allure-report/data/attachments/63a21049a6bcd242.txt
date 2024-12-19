@@ -1,0 +1,58 @@
+15:05:01 [32mINFO[0m Starting the test...
+15:05:03 [32mINFO[0m Navigating to: https://storefront:backside180@dw-staging.burton.com/ca/en/p/burton-classic-short-sleeve-t-shirt/W25-216881.html?automationSession=true
+15:05:17 [32mINFO[0m 
+----- CART ASSERTIONS -----
+15:05:17 [32mINFO[0m Assertion Success: Name matches. Expected = Burton Classic Short Sleeve T-Shirt, Actual = Burton Classic Short Sleeve T-Shirt
+15:05:17 [32mINFO[0m Assertion Success: Price matches. Expected = C$ 34.99, Actual = C$ 34.99
+15:05:17 [32mINFO[0m Assertion Success: Color matches. Expected = Color: True Black, Actual = Color: True Black
+15:05:17 [32mINFO[0m Assertion Success: Size matches. Expected = Size: L, Actual = Size: L
+15:05:23 [32mINFO[0m Performance metrics: {'dns_time': 0, 'dom_content_loaded': 1703, 'page_load_time': 3822, 'server_response_time': 594}
+15:05:24 [32mINFO[0m Starting to fill credit card details...
+15:05:38 [32mINFO[0m Starting to fill credit card details...
+15:05:45 [32mINFO[0m Filling card number
+15:05:58 [32mINFO[0m Filling expiry date
+15:06:01 [32mINFO[0m Filling CVV
+15:06:02 [32mINFO[0m Filling cardholder name
+15:06:05 [32mINFO[0m Successfully filled all credit card details
+15:06:19 [33mWARNING[0m Retrying get_order_data due to: Message: stale element reference: stale element not found
+                   (Session info: chrome=131.0.6778.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                 Stacktrace:
+                 #0 0x55f30e74d34a <unknown>
+                 #1 0x55f30e2636e0 <unknown>
+                 #2 0x55f30e274fbb <unknown>
+                 #3 0x55f30e273d45 <unknown>
+                 #4 0x55f30e269d39 <unknown>
+                 #5 0x55f30e2680a0 <unknown>
+                 #6 0x55f30e26b968 <unknown>
+                 #7 0x55f30e26b9f3 <unknown>
+                 #8 0x55f30e2b2045 <unknown>
+                 #9 0x55f30e2b2681 <unknown>
+                 #10 0x55f30e2a6b26 <unknown>
+                 #11 0x55f30e2d648d <unknown>
+                 #12 0x55f30e2a6a18 <unknown>
+                 #13 0x55f30e2d662e <unknown>
+                 #14 0x55f30e2f4ed7 <unknown>
+                 #15 0x55f30e2d6203 <unknown>
+                 #16 0x55f30e2a4cc0 <unknown>
+                 #17 0x55f30e2a5c9e <unknown>
+                 #18 0x55f30e71ad3b <unknown>
+                 #19 0x55f30e71ecc2 <unknown>
+                 #20 0x55f30e707b6c <unknown>
+                 #21 0x55f30e71f837 <unknown>
+                 #22 0x55f30e6ed10f <unknown>
+                 #23 0x55f30e73c5a8 <unknown>
+                 #24 0x55f30e73c770 <unknown>
+                 #25 0x55f30e74c1c6 <unknown>
+                 #26 0x7f8b25b58a94 <unknown>
+                 #27 0x7f8b25be5a34 __clone
+15:06:21 [32mINFO[0m 
+----- ORDER CONFIRMATION ASSERTIONS -----
+15:06:21 [32mINFO[0m Assertion Success: Email matches. Expected = webdevtesting@burton.com, Actual = webdevtesting@burton.com
+15:06:21 [32mINFO[0m Assertion Success: Customer Name matches. Expected = WebDev Testing, Actual = WebDev Testing
+15:06:21 [32mINFO[0m Assertion Success: Shipping Address1 matches. Expected = 98 Ossington Ave, Actual = 98 Ossington Ave
+15:06:21 [32mINFO[0m Assertion Success: Shipping City matches. Expected = Toronto, Actual = Toronto
+15:06:21 [32mINFO[0m Assertion Success: Shipping State matches. Expected = ON, Actual = ON
+15:06:21 [32mINFO[0m Assertion Success: Phone Number matches. Expected = (647) 361-4400, Actual = (647) 361-4400
+15:06:21 [32mINFO[0m Assertion Success: Shipping State matches. Expected = ON, Actual = ON
+15:06:21 [32mINFO[0m Assertion Success: Shipping Method Price matches. Expected = C$ 9.95, Actual = C$ 9.95
+15:06:21 [32mINFO[0m Assertion passed for locale: ca/en. ORDER NUMBER: XCA0137847

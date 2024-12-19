@@ -1,0 +1,57 @@
+15:07:38 [32mINFO[0m Starting the test...
+15:07:39 [32mINFO[0m Navigating to: https://storefront:backside180@dw-staging.burton.com/be/en/p/burton-classic-short-sleeve-t-shirt/W25-216881.html?automationSession=true
+15:07:56 [32mINFO[0m 
+----- CART ASSERTIONS -----
+15:07:56 [32mINFO[0m Assertion Success: Name matches. Expected = Burton Classic Short Sleeve T-Shirt, Actual = Burton Classic Short Sleeve T-Shirt
+15:07:56 [32mINFO[0m Assertion Success: Price matches. Expected = 32,00 €, Actual = 32,00 €
+15:07:56 [32mINFO[0m Assertion Success: Color matches. Expected = Color: True Black, Actual = Color: True Black
+15:07:56 [32mINFO[0m Assertion Success: Size matches. Expected = Size: L, Actual = Size: L
+15:08:03 [32mINFO[0m Performance metrics: {'dns_time': 0, 'dom_content_loaded': 1867, 'page_load_time': 4645, 'server_response_time': 681}
+15:08:04 [32mINFO[0m Starting to fill credit card details...
+15:08:18 [32mINFO[0m Starting to fill credit card details...
+15:08:28 [32mINFO[0m Filling card number
+15:08:38 [32mINFO[0m Filling expiry date
+15:08:39 [32mINFO[0m Filling CVV
+15:08:39 [32mINFO[0m Filling cardholder name
+15:08:39 [32mINFO[0m Successfully filled all credit card details
+15:08:50 [33mWARNING[0m Retrying get_order_data due to: Message: stale element reference: stale element not found
+                   (Session info: chrome=131.0.6778.108); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                 Stacktrace:
+                 #0 0x556e7877c34a <unknown>
+                 #1 0x556e782926e0 <unknown>
+                 #2 0x556e782a3fbb <unknown>
+                 #3 0x556e782a2d45 <unknown>
+                 #4 0x556e78298d39 <unknown>
+                 #5 0x556e782970a0 <unknown>
+                 #6 0x556e7829a968 <unknown>
+                 #7 0x556e7829a9f3 <unknown>
+                 #8 0x556e782e1045 <unknown>
+                 #9 0x556e782e1681 <unknown>
+                 #10 0x556e782d5b26 <unknown>
+                 #11 0x556e7830548d <unknown>
+                 #12 0x556e782d5a18 <unknown>
+                 #13 0x556e7830562e <unknown>
+                 #14 0x556e78323ed7 <unknown>
+                 #15 0x556e78305203 <unknown>
+                 #16 0x556e782d3cc0 <unknown>
+                 #17 0x556e782d4c9e <unknown>
+                 #18 0x556e78749d3b <unknown>
+                 #19 0x556e7874dcc2 <unknown>
+                 #20 0x556e78736b6c <unknown>
+                 #21 0x556e7874e837 <unknown>
+                 #22 0x556e7871c10f <unknown>
+                 #23 0x556e7876b5a8 <unknown>
+                 #24 0x556e7876b770 <unknown>
+                 #25 0x556e7877b1c6 <unknown>
+                 #26 0x7fcc90a61a94 <unknown>
+                 #27 0x7fcc90aeea34 __clone
+15:08:53 [32mINFO[0m 
+----- ORDER CONFIRMATION ASSERTIONS -----
+15:08:53 [32mINFO[0m Assertion Success: Email matches. Expected = webdevtesting@burton.com, Actual = webdevtesting@burton.com
+15:08:53 [32mINFO[0m Assertion Success: Customer Name matches. Expected = WebDev Testing, Actual = WebDev Testing
+15:08:53 [32mINFO[0m Assertion Success: Shipping Address1 matches. Expected = Doornstraat 110, Actual = Doornstraat 110
+15:08:53 [32mINFO[0m Assertion Success: Shipping City matches. Expected = Bruges, Actual = Bruges
+15:08:53 [32mINFO[0m Assertion Success: Shipping State matches. Expected = None, Actual = None
+15:08:53 [32mINFO[0m Assertion Success: Phone Number matches. Expected = 049 549 0157, Actual = 049 549 0157
+15:08:53 [32mINFO[0m Assertion Success: Shipping Method Price matches. Expected = 5,00 €, Actual = 5,00 €
+15:08:53 [32mINFO[0m Assertion passed for locale: be/en. ORDER NUMBER: XBE0125313

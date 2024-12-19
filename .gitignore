@@ -10,8 +10,11 @@ __pycache__/
 logs/
 *.log
 
-# Ignore Allure Reports
-reports/
+# Ignore allure-results
+allure-results/
+
+# Track allure-report
+!allure-report/
 
 # Ignore Docker artifacts
 docker-compose.override.yml

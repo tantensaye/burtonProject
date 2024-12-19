@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Dec 12 15:10:34 UTC 2024","Thu Dec 12 15:12:01 UTC 2024","86856","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:06:30 UTC 2024","Thu Dec 12 15:07:38 UTC 2024","68704","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:08:57 UTC 2024","Thu Dec 12 15:10:25 UTC 2024","87742","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:07:46 UTC 2024","Thu Dec 12 15:08:54 UTC 2024","67289","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:03:39 UTC 2024","Thu Dec 12 15:05:01 UTC 2024","82609","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:05:08 UTC 2024","Thu Dec 12 15:06:21 UTC 2024","73122","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""
+"passed","Thu Dec 12 15:12:08 UTC 2024","Thu Dec 12 15:13:20 UTC 2024","71810","tests","test_SoftgoodsSecureCheckout","","","","Softgoods Secure Checkout",""

@@ -52,8 +52,16 @@ pipelines:
           # Stop Docker Services
           - docker-compose -f docker-compose.yml down
 
-          # Generate Allure report
+          # Generate Allure Report
           - allure generate allure-results -o allure-report
+
+          # Push Allure Report
+          - git config --global user.email "thomasa@burton.com"
+          - git config --global user.name "Thomas Antensaye"
+          - git checkout main
+          - git add allure-report
+          - git commit -m "Add generated Allure report [skip ci]"
+          - git push origin main
         artifacts:
           - allure-report/**
         environment:
